@@ -1,3 +1,5 @@
+  0. 将skills目录下的prd和ralph两个skills复制到目录 “~/.claude/skills” 中
+
   1. 在目标项目中准备 Ralph 文件
 
   # 进入你的项目目录（假设就在 ralph 仓库内开发）
