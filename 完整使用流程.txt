@@ -1,0 +1,33 @@
+  1. 在目标项目中准备 Ralph 文件
+
+  # 进入你的项目目录（假设就在 ralph 仓库内开发）
+  cd ~/Projects/ralph
+
+  # ralph.sh 和 CLAUDE.md 已在仓库根目录，无需复制
+  # 如果是其他项目，需要复制过去：
+  # cp /path/to/ralph/ralph.sh ./
+  # cp /path/to/ralph/CLAUDE.md ./
+
+  2. 在 Claude Code 中生成 prd.json
+
+  # 启动 Claude Code
+  claude
+
+  # 第一步：生成 PRD 文档
+  > /prd
+  > （描述你的功能，回答澄清问题）
+  # 输出：tasks/prd-xxx.md
+
+  # 第二步：转为 Ralph 格式
+  > /ralph
+  > 将 tasks/prd-xxx.md 转为 prd.json
+  # 输出：prd.json
+
+  # 退出 Claude Code
+  > /exit
+
+  3. 在普通终端运行 Ralph
+
+  ./ralph.sh --tool claude 10
+
+  就这三步。核心就是：先用 skills 生成 prd.json，再用 ralph.sh 跑循环。
